@@ -14,6 +14,6 @@ function runMiddleware(req, res, fn) {
 }
 
 export default async function handler(req, res) {
-  await runMiddleware(cors);
+  await runMiddleware(req, res, cors);
   res.status(200).json({ name: "John Doe" });
 }
